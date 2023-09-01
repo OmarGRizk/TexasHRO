@@ -1,0 +1,71 @@
+﻿@page
+@model DotSQL.Pages.Clients.LoginModel
+@{
+}
+
+
+
+<br>
+<head>
+    <script src="https://kit.fontawesome.com/59b846b5cf.js"
+            crossorigin="anonymous"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/css/form-style.css" />
+    <link rel="stylesheet" href="~/css/header.css" />
+    <link rel="stylesheet" href="~/css/style.css" />
+    <title>TexasHRO - Form</title>
+</head>
+
+
+
+
+<br>
+<h2>Login</h2>
+
+
+
+<form method="POST">
+    <div class="row mb-3">
+        <label for="username">username</label><br />
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="username" value="@Model.loginInfo.username">
+        </div>
+    </div>
+ 
+    <div class="row mb-3">
+        <label for="password3">password3</label><br />
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="password3" value="@Model.loginInfo.password3">
+        </div>
+    </div>
+
+
+
+
+
+    <div class="row mb-3">
+        <div class="offset-sm-3 col-sm-3 d-grid">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+        <div class="col-sm-3 d-grid">
+            <a class="btn btn-outline-primary" href="/" role="button">Cancel</a>
+        </div>
+    </div>
+    @if (!string.IsNullOrEmpty(Model.errorMessage))
+    {
+        <div class="alert alert-danger" role="alert">
+            @Model.errorMessage
+        </div>
+    }
+
+    @if (!string.IsNullOrEmpty(Model.successMessage))
+    {
+        <div class="alert alert-success" role="alert">
+            @Model.successMessage
+        </div>
+    }
+
+
+</form>
+

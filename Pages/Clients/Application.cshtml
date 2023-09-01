@@ -1,0 +1,203 @@
+﻿@page
+@model DotSQL.Pages.Clients.ApplicationModel
+@{
+}
+
+
+
+<html lang="en">
+<br>
+<head>
+    <script src="https://kit.fontawesome.com/59b846b5cf.js"
+            crossorigin="anonymous"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/css/form-style.css" />
+    <link rel="stylesheet" href="~/css/header.css" />
+    <link rel="stylesheet" href="~/css/style.css" />
+    <style>
+        .centered-alert {
+            text-align: center;
+        }
+    </style>
+
+    <!--<script>function validateForm() {
+            var usernameInput = document.getElementsByName("username")[0];
+            var username = usernameInput.value;
+
+            if (username === "") {
+                var alertDiv = document.createElement("div");
+                alertDiv.className = "centered-alert";
+                alertDiv.textContent = "Username must the same you logged in!"
+                alert(alertDiv.innerHTML);
+                return false; // Prevent form submission
+            }
+
+            return true; // Allow form submission
+        }</script>-->
+
+    <script>function validateForm() {
+            var usernameInput = document.getElementsByName("username")[0];
+            var submitterInputs = document.getElementsByName("submitter1");
+            var firstNameInput = document.getElementsByName("firstname1")[0];
+            var lastNameInput = document.getElementsByName("lastname1")[0];
+            var phoneInput = document.getElementsByName("phone1")[0];
+            var emailInput = document.getElementsByName("email1")[0];
+            var insuranceInputs = document.getElementsByName("insurance");
+
+            var username = usernameInput.value;
+            var firstName = firstNameInput.value;
+            var lastName = lastNameInput.value;
+            var phone = phoneInput.value;
+            var email = emailInput.value;
+
+            // Validate username
+            if (username === "") {
+                // Show alert
+                alert("Username is required!")
+
+                return false; // Prevent form submission
+            }
+
+            // Validate submitter
+            var selectedSubmitter = Array.from(submitterInputs).find(input => input.checked);
+            if (!selectedSubmitter) {
+                // Show alert
+                alert("Submitter is required!")
+
+                return false; // Prevent form submission
+            }
+
+            // Validate first name
+            if (firstName === "") {
+                // Show alert
+                alert("First Name is required!")
+
+                return false; // Prevent form submission
+            }
+
+            // Validate last name
+            if (lastName === "") {
+                // Show alert
+                alert("Last Name is required!")
+
+                return false; // Prevent form submission
+            }
+
+            // Validate phone
+            if (phone === "") {
+                // Show alert
+                alert("Phone Number is required!")
+
+                return false; // Prevent form submission
+            }
+
+            // Validate email
+            if (email === "") {
+                // Show alert
+                alert("Email is required!")
+
+                return false; // Prevent form submission
+            }
+
+            // Perform the AJAX request to check if the username exists in the newuser1 table
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "/Clients/NewUser/CheckUsername?username=" + encodeURIComponent(username), false);
+            xhr.send();
+
+            if (xhr.responseText === "true") {
+                // Show alert
+                alert(" ")
+
+                usernameInput.value = ""; // Clear the input field
+                return false; // Prevent form submission
+            }
+
+            // Validate insurance
+            var selectedInsurance = Array.from(insuranceInputs).find(input => input.checked);
+            if (!selectedInsurance) {
+                // Show alert
+                alert("Insurance is required!")
+
+                return false; // Prevent form submission
+            }
+
+            return true; // Allow form submission
+        }</script>
+
+    <title>TexasHRO - Form</title>
+</head>
+
+
+
+<body class=" b-form">
+<div class="form-body">
+    <h1>Please submit your information below.</h1>
+    <br />
+    <h2>Applicant</h2>
+    <form method="POST" onsubmit="return validateForm()">
+       
+        <div class="group submitter section">
+            <label class="group-head">Submitter</label><br />
+            <div class="slection-container">
+                <input type="radio" id="self" name="submitter1" value="self" @(Model.applicationInfo.submitter1 == "self" ? "checked" : "")>
+                <label for="self">Self</label><br />
+            </div>
+            <div class="slection-container">
+                <input type="radio" id="family" name="submitter1" value="family" @(Model.applicationInfo.submitter1 == "family" ? "checked" : "")>
+                <label for="family">Family</label><br />
+            </div>
+            <div class="slection-container">
+                <input type="radio" id="friend" name="submitter1" value="friend" @(Model.applicationInfo.submitter1 == "friend" ? "checked" : "")>
+                <label for="friend">Friend</label>
+            </div>
+        </div>
+        <h2>Applicant Informtion</h2>
+
+        <div class="applicant-info section">
+            <label for="username">User Name:</label><br />
+            <input type="text" class="form-control" name="username" value="@Model.applicationInfo.username">
+            <br />
+            <label for="firstname1">First name</label><br />
+            <input type="text" class="form-control" name="firstname1" value="@Model.applicationInfo.firstname1">
+            <br />
+            <label for="lastname1">Last name</label><br />
+            <input type="text" class="form-control" name="lastname1" value="@Model.applicationInfo.lastname1">
+            <br />
+            <label for="phone1">Phone number</label><br />
+            <input type="text" class="form-control" name="phone1" value="@Model.applicationInfo.phone1">
+            <br />
+            <label for="email1">Email</label><br />
+            <input type="text" class="form-control" name="email1" value="@Model.applicationInfo.email1">
+            <br />
+        </div>
+        <h2>Insurance Information</h2>
+
+        <div class="group insurance section">
+            <div class="group-head">
+                <label for="insurance">Insurance Type</label><br />
+            </div>
+            <div class="slection-container">
+                <input type="radio" id="homeowner" name="insurance" value="homeowner"@(Model.applicationInfo.insurance =="homeowner" ? "checked": "")>
+                <label for="homeowner"> Homeowners Insurance</label><br />
+            </div>
+            <div class="slection-container">
+                <input type="radio" id="renters" name="insurance" value="renters"@(Model.applicationInfo.insurance =="renters" ? "checked": "")>
+                <label for="renters"> Renters Insurance</label><br />
+            </div>
+            <div class="slection-container">
+                <input type="radio" id="flood" name="insurance" value="flood" @(Model.applicationInfo.insurance =="flood" ? "checked": "")>
+                <label for="flood"> Flood Insurance</label><br />
+            </div>
+        </div>
+
+            <br /><br />
+        <div class="row mb-3">
+             <div class="offset-sm-3 col-sm-3 d-grid submit-btn">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+             </div>
+         </div>
+    </form>
+</div>
+</body>
+</html>

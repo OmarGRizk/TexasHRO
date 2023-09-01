@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - DotSQL</title>
+    
+    <link rel="stylesheet" href="~/css/form-style.css" />
+    <link rel="stylesheet" href="~/css/header.css" />
+    <link rel="stylesheet" href="~/css/style.css" />
+</head>
+<body>
+    <div class="header">
+        <div class="Left-section">
+            <a asp-area="" asp-page="/Index">
+
+            <img src="~/lib/Texas-logo.jpg" alt="" />
+            </a>
+        </div>
+        <div class="middle-section">
+            <div style="display: inline-block">Texas</div>
+            <div style="display: inline-block">HRO</div>
+        </div>
+        <div class="right-section">
+            <div class="login-icon-container">
+                <i class="fa-solid fa-user login-icon"></i>
+                <div class="tooltip">
+                    <!--<div class="tooltip-input">
+                        <div class="tooltip-email">
+                            <label for="email">Email</label>
+                            <input type="text" id="email" name="email" value="" />
+                        </div>
+                        <div class="tooltip-password">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password" value="" />
+                        </div>
+                    </div>
+                    <br /><br />
+                    <div class="tooltip-submit-btn">
+                        <input type="submit" value="Submit" />
+                    </div> -->
+                    <a asp-area="" asp-page="/Index">HomePage</a>
+                    <a asp-area="" asp-page="/Clients/newUser">LogIn Page</a>
+                    <a asp-area="" asp-page="/Clients/Application">Application Page</a>
+                    <a asp-area="" asp-page="/Clients/Confirmation">ConfirmationPage</a>
+                    <a asp-area="" asp-page="/Clients/hro_database_1">Database</a>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+     <!-- <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2023 - project_2 - <a asp-area="" asp-page="/Privacy">Privacy</a>
+        </div>
+    </footer> -->
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

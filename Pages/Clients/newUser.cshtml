@@ -1,0 +1,78 @@
+﻿@page
+@model DotSQL.Pages.Clients.NewUserModel
+@{
+}
+
+
+
+<br>
+<head>
+    <script src="https://kit.fontawesome.com/59b846b5cf.js"
+            crossorigin="anonymous"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="~/css/login-page-style.css" />
+
+    <title>TexasHRO - Signup</title>
+</head>
+
+
+
+
+
+<body class="b-form">
+
+<div id="login-form-body" class="form-body">
+
+    <div class="Login-box">
+        <h2 style="display: inline-block; font-size:50px;  " >New Applicant</h2>
+        <form method="POST" class="login-fields">
+            
+                
+            <div class="login-fields-field">
+                <label >Username:</label>
+                <input type="text" class="form-control" name="username" value="@Model.newuser.username">
+                
+            </div>
+
+                <div class="login-fields-field">
+                <label>Email:</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" name="email3" value="@Model.newuser.email3">
+                </div>
+            </div>
+                <div class="login-fields-field">
+                <label>Password:</label>
+                <div class="col-sm-6">
+                    <input type="password" class="form-control" name="password3" value="@Model.newuser.password3">
+                </div>
+            </div>
+                <button type="submit" class="sign-btn">Sign up</button>
+
+            @if (Model.successMessage.Length > 0)
+            {
+                <div class="row mb-3">
+                    <div class="col-sm-9">
+                        <div class='alert alert-success alert-dismissible fade show' role='alert'>
+                            <strong>@Model.successMessage</strong>
+                            <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                        </div>
+                    </div>
+                </div>
+            }
+                
+            <div class="">
+                <div >
+                        
+                </div>
+                <!--<div class="col-sm-3 d-grid">
+                    <a class="btn btn-outline-primary" href="/Clients/Application" role="button">Cancel</a>
+                </div>-->
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+
+

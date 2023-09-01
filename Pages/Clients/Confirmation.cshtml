@@ -1,0 +1,48 @@
+﻿@page
+@model DotSQL.Pages.Clients.ConfirmationModel
+@{
+}
+
+
+
+<html lang="en">
+<head>
+
+    <script src="https://kit.fontawesome.com/59b846b5cf.js"
+            crossorigin="anonymous"></script>
+    <script src="https://randojs.com/1.0.0.js"></script>
+    <script>function showRandomNumber() {
+            document.getElementById("myNumber").innerHTML = rando(100000, 999999);
+        }</script>
+    <link rel="stylesheet" href="~/css/form-style.css" />
+    <link rel="stylesheet" href="~/css/header.css" />
+    <link rel="stylesheet" href="~/css/home-page-style.css" />
+    <link rel="stylesheet" href="~/css/Confirmation.css" />
+    <link rel="stylesheet" href="~/css/style.css" />
+    <title>Confirmation Page</title>
+</head>
+<body class="b b-form" onload="showRandomNumber();">
+
+
+    <div class="form-body">
+        <p class="confirmation-head">Submission Confirmation</p>
+        <div class="confirmation-text">
+            <p>
+                Thank you for submitting your damage information form. Your
+                information has been received and your confirmation number is
+                <span class="confirmation-number"> RDTXS-</span><span class="confirmation-number" id="myNumber"></span>.<br /><br />
+                Please make a note of this number for future reference.<br />
+                This confirmation will also be emailed to you at the email address you
+                provided in the form. Please check your spam folder for the
+                confirmation email if you do not see it in your inbox. If you did not
+                include an email in the form and need more information, you may
+                contact Texas Housing Recovery Operations at
+                <strong> (212) 615-8329</strong>.<br />
+                The Mayor's Office of Housing Recovery Operations may contact you if
+                additional information is needed. If you would like to report damage
+                to another property, you can submit another<a  asp-area="" asp-page="/Index">Damage Information Form</a>.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

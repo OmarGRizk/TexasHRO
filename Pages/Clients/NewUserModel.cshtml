@@ -1,0 +1,60 @@
+﻿@page
+@model DotSQL.Pages.Clients.NewUserModel 
+@{
+}
+
+
+
+<br>
+<head>
+    <script src="https://kit.fontawesome.com/59b846b5cf.js"
+            crossorigin="anonymous"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/css/form-style.css" />
+    <link rel="stylesheet" href="~/css/header.css" />
+    <link rel="stylesheet" href="~/css/style.css" />
+    <title>TexasHRO - Form</title>
+</head>
+
+
+
+
+<br>
+<h2>TEST</h2>
+
+
+
+@if (Model.errorMessage.Length > 0)
+{
+    <div class='alert alert-warning alert-dismissible fade show' role='alert'>
+        <strong>@Model.errorMessage</strong>
+        <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+    </div>
+}
+
+<form method="POST">
+    <!-- <div class="row mb-3">
+         <label class="col-sm-3 col-form-label">Name</label>
+         <div class="col-sm-6">
+             <input type="text" class="form-control" name="test" value="Model.testInfo.test">
+         </div>
+     </div>
+    <div class="slection-container">
+        <input type="radio" id="self" name="test" value="Model.testInfo.test">
+        <label for="self">Self</label><br>
+    </div>
+
+
+    <div class="slection-container">
+        <input type="checkbox" id="test1" name="test1" value="Model.testInfo.test1">
+        <label for="test1"> I have a bike</label><br>
+    </div>
+
+    <div class="row mb-3">
+        <div class="offset-sm-3 col-sm-3 d-grid">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </div>-->
+</form>
+

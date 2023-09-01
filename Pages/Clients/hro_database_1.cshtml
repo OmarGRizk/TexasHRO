@@ -1,0 +1,97 @@
+﻿@page
+@model DotSQL.Pages.Clients.hro_database_1
+@{
+}
+
+
+<head>
+    <script src="https://kit.fontawesome.com/59b846b5cf.js"
+            crossorigin="anonymous"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/css/header.css" />
+    <link rel="stylesheet" href="~/css/form-style.css" />
+    <link rel="stylesheet" href="~/css/Database-style.css" />
+    <link rel="stylesheet" href="~/css/style.css" />
+    <title>TexasHRO - Form</title>
+</head>
+<body class="b b-form">
+
+    <div class="form-body">
+
+        <h2>List of Applicants</h2>
+        <!-- <a class='btn btn-primary btn-sm' href='/Clients/Applicants'>New Applicant</a>-->
+        <table>
+            <thead>
+                <tr>
+                    <th>Created At</th>
+                    <th>ID</th>
+                    <th>Submitter</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                    <th>Insurance</th>
+                    <th>Username</th>
+                </tr>
+
+            </thead>
+
+            <tbody>
+                @foreach (var item in Model.listApplications)
+                {
+                    <tr>
+                        <td>@item.created_at</td>
+                        <td>@item.id</td>
+                        <td>@item.submitter1</td>
+                        <td>@item.firstname1</td>
+                        <td>@item.lastname1</td>
+                        <td>@item.phone1</td>
+                        <td>@item.email1</td>
+                        <td>@item.insurance</td>
+                        <td>@item.username</td>
+                        <td>
+                            <!--  <a class="btn btn-primary btn-sm" href="/Clients/Edit?id=item.username">Edit</a>
+                        <a class="btn btn-danger btn-sm" href="/Clients/Delete?id=item.username">Delete</a>-->
+                        </td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+        <br />
+        <h2>List of Users</h2>
+        <!--<a class='btn btn-primary btn-sm' href='/Clients/Applicants'>New User</a>-->
+        <table>
+            <thead>
+                <tr>
+                    <th>Created At</th>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Password</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+                @foreach (var item in Model.listnewUsers)
+                {
+                    <tr>
+                        <td>@item.created_at</td>
+                        <td>@item.username</td>
+                        <td>@item.email3</td>
+                        <td>@item.password3</td>
+                        <td>
+                            <!--    <a class="btn btn-primary btn-sm" href="/Clients/Edit?id=item.username">Edit</a>
+                        <a class="btn btn-danger btn-sm" href="/Clients/Delete?id=item.username">Delete</a>-->
+                        </td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>
+    
+</body>
+<footer></footer>

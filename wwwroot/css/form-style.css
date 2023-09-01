@@ -1,0 +1,205 @@
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.b-form {
+    background-color: rgb(232, 232, 232);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@media(min-width:800px){
+    .form-body {
+        box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.868);
+        width: 60%;
+        min-height: 700px;
+        margin: auto auto 100px auto;
+        border: 3px lightblue;
+        padding: 30px 10px 20px 10px;
+        animation: fade-anim 1s;
+    }
+}
+@media(max-width:800px){
+    .form-body {
+        box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.868);
+        width: 95%;
+        min-height: 700px;
+        margin: auto auto 100px auto;
+        border: 3px lightblue;
+        padding: 30px 10px 20px 10px;
+        animation: fade-anim 1s;
+    }
+}
+
+
+
+
+
+
+
+@keyframes fade-anim {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.section{
+    margin: auto auto 100px auto;
+}
+
+h2 {
+    margin-left: 10px;
+    color: rgba(5,30,100,1);
+}
+h1 {
+    margin-left: 5px;
+    color: rgba(5,30,100,1);
+}
+
+
+.applicant-info{
+    
+    width: 90%;
+    
+   
+}
+.applicant-info input{
+    font-size: 15px;
+    border-radius: 20px;
+    border-style: none;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+    display: block;
+    width:100%;
+    height: 35px;
+    margin: 5px 0px;
+    padding-left: px;
+    transition: box-shadow 0.15s;
+    
+
+
+}
+
+
+
+.applicant-info label{
+    color: rgb(70, 62, 57);
+    font-weight: 700;
+    font-size: 20px;
+
+}
+
+.group{
+    
+    width: 90%;
+}
+
+.group .group-head{
+    color: rgb(70, 62, 57);
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.group .slection-container label {
+    
+    font-weight: bold;
+    font-size: 20px;
+    display: inline-block;
+    vertical-align: super;
+    width: 90%;
+    cursor: pointer;
+    padding: 6px 0px;
+    
+    
+}
+.group input{
+    vertical-align: super;
+    margin-left: 10px;
+    cursor: pointer;
+    
+    
+   
+}
+
+
+.group .slection-container{
+    font-size: 15px;
+    border-radius: 20px;
+    border-style: none;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+    display: block;
+    width:100%;
+    height: 35px;
+    margin: 5px 0px 25px 0px;
+    transition: box-shadow 0.2s;
+    cursor: pointer;
+    
+   
+    
+    
+    
+}
+.sectiion.group.slection-container:hover{
+     box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.7);
+}
+
+.group .slection-container:active{
+    box-shadow: 0px 0px 7px rgba(7, 167, 216, 0.7);  
+}
+
+.applicant-info input:focus{
+    outline: none;
+    border-style: hidden;
+    box-shadow: 0px 0px 7px rgba(7, 167, 216, 0.7);  
+}
+
+.submit-btn button{
+    background-color: rgb(4, 113, 238);
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 20px;
+    border-style: none;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+    display: block;
+    width:80%;
+    height: 35px;
+    margin: auto;
+    cursor: pointer;
+    transition: box-shadow 0.15s, width 0.2s, height 0.15s;
+}
+
+.submit-btn button:hover{
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+    width: 85%;
+    height: 40px;
+}
+
+.clickable-btn {
+    background-color: rgb(4, 113, 238);
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 20px;
+    border-style: none;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+    display: block;
+    width: 80%;
+    height: 35px;
+    margin: auto;
+    cursor: pointer;
+    transition: box-shadow 0.15s, width 0.2s, height 0.15s;
+}
+
+ .clickable-btn:hover {
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+        width: 85%;
+        height: 40px;
+ }

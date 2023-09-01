@@ -1,0 +1,81 @@
+﻿@page
+@model DotSQL.Pages.Clients.EditModel
+@{
+}
+
+<br>
+<h2>Edit Applicant</h2>
+
+@if (Model.errorMessage.Length > 0) {
+    <div class='alert alert-warning alert-dismissible fade show' role='alert'>
+      <strong>@Model.errorMessage</strong>
+      <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+    </div>
+}
+
+<form method="POST">
+    <input type="hidden" name="id" value="@Model.applicantInfo.id">
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">username</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="username" value="@Model.applicantInfo.username">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">submitter1</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="submitter1" value="@Model.applicantInfo.submitter1">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">firstname1</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="firstname1" value="@Model.applicantInfo.firstname1">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">lastname1</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="lastname1" value="@Model.applicantInfo.lastname1">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">phone1</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="phone1" value="@Model.applicantInfo.phone1">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">email1</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="email1" value="@Model.applicantInfo.email1">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">insurance</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="insurance" value="@Model.applicantInfo.insurance">
+        </div>
+    </div>
+
+    @if (Model.successMessage.Length > 0)
+    {
+        <div class="row mb-3">
+            <div class="col-sm-9">
+                <div class='alert alert-success alert-dismissible fade show' role='alert'>
+                    <strong>@Model.successMessage</strong>
+                    <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                </div>
+            </div>
+        </div>
+    }
+
+    <div class="row mb-3">
+        <div class="offset-sm-3 col-sm-3 d-grid">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+        <div class="col-sm-3 d-grid">
+            <a class="btn btn-outline-primary" href="/" role="button">Cancel</a>
+        </div>
+    </div>
+</form>

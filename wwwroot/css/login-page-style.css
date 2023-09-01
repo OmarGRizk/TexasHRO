@@ -1,0 +1,178 @@
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@media(min-width:1600px) {
+    .Login-box {
+        font-size: 20px;
+        background: rgb(252,252,252);
+        background: linear-gradient(143deg, rgba(252,252,252,1) 0%, rgba(206,255,0,1) 24%, rgba(255,239,0,0.7875525210084033) 100%);
+        width: 30%;
+        height: 300px;
+        padding: 10px;
+        border-radius: 20px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+        position: absolute;
+        top: 42%;
+        left: 35%;
+        right: 35%;
+        transform: translate(0, -40%);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+@media (min-width:1200px) and (max-width:1600px) {
+    .Login-box {
+        font-size: 20px;
+        background: rgb(252,252,252);
+        background: linear-gradient(143deg, rgba(252,252,252,1) 0%, rgba(206,255,0,1) 24%, rgba(255,239,0,0.7875525210084033) 100%);
+        width: 40%;
+        height: 300px;
+        padding: 10px;
+        border-radius: 20px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+        position: absolute;
+        top: 42%;
+        left: 30%;
+        right: 30%;
+        transform: translate(0, -40%);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+@media (min-width:600px) and (max-width:1200px) {
+    .Login-box {
+        font-size: 20px;
+        background: rgb(252,252,252);
+        background: linear-gradient(143deg, rgba(252,252,252,1) 0%, rgba(206,255,0,1) 24%, rgba(255,239,0,0.7875525210084033) 100%);
+        width: 50%;
+        height: 300px;
+        padding: 10px;
+        border-radius: 20px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+        position: absolute;
+        top: 42%;
+        left: 24%;
+        transform: translate(0, -40%);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+@media (max-width:600px) {
+    .Login-box {
+        font-size: 20px;
+        background: rgb(252,252,252);
+        background: linear-gradient(143deg, rgba(252,252,252,1) 0%, rgba(206,255,0,1) 24%, rgba(255,239,0,0.7875525210084033) 100%);
+        width: 80%;
+        height: 60%;
+        padding: 10px;
+        border-radius: 20px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+        position: absolute;
+        top: 45%;
+        left: 9%;
+        transform: translate(0, -40%);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+    
+
+}
+
+
+.Login-box h2 {
+    width: 50%;
+}
+@media (min-width:600px) and (max-width:1000px) {
+    .Login-box h2 {
+        margin:50% auto 50% auto;
+        position:relative;
+        width: 25%;
+        writing-mode:vertical-rl;
+    }
+}
+@media (max-width:600px) {
+    .Login-box h2{
+        width:100%;
+        margin:10% 0;
+    }
+}
+
+@media (max-width:600px){
+    .login-fields {
+        padding-top: 0;
+    }
+}
+
+.login-fields {
+    padding-top: 30px;
+    width: 50%;
+    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-right: 0;
+}
+@media (max-width:600px) {
+    .login-fields {
+        padding-top: 0;
+        padding-bottom:10%;
+        width: 90%;
+    }
+}
+
+    .login-fields input {
+        font-size: 15px;
+        border-radius: 20px;
+        border-style: none;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+        height: 25px;
+        margin: 5px 0px;
+        padding-left: 15px;
+        display: block;
+        width:90%;
+
+    }
+
+        .login-fields label {
+        color: rgb(70, 62, 57);
+        font-weight: 700;
+        font-size: 15px;
+    }
+
+.login-fields-field {
+    width: 100%;
+}
+
+.sign-btn {
+    margin-top: 10px;
+    text-align: center;
+    background-color: rgb(4, 113, 238);
+    border: none;
+    border-radius: 15px;
+    width: 50%;
+    height: 30px;
+    font-size: 18px;
+    color: white;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    transition: box-shadow 0.15s;
+
+}
+
+    .sign-btn:hover {
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+    }
